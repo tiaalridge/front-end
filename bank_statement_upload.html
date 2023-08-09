@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Upload Example</title>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container">
+        <form id="myForm" action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+        </form>
+    </div>
+
+
+
+
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you for submitting the form!</p>
+    </div>
+
+
+
+
+    <script>
+        const form = document.getElementById('myForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+
+
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+
+
+
+            // Simulate form submission delay (replace this with your actual logic)
+            setTimeout(function () {
+                // Show the "Thank you" message
+                thankYouMessage.style.display = 'block';
+
+
+
+
+                // Hide the form after submission
+                form.style.display = 'none';
+            }, 2000); // Simulate a 2-second delay
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
